@@ -23,6 +23,10 @@ defmodule Physics.Converter do
     light_seconds |> round_to(precision)
   end
 
+  def seconds_to_hours(seconds) do
+    seconds / 3600 |> to_nearest_tenth
+  end
+
   defp from_miles(val), do: val * 5.36819e-6
   defp from_meters(val), do: val * 3.335638620368e-9
   defp from_feet(val), do: val * 1.016702651488166404e-9
